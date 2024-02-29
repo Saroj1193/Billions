@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatSenderCell" id="KGk-i7-Jjw" customClass="ChatSenderCell" customModule="BillionsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRn-n0-YTd">
+                        <rect key="frame" x="96" y="15" width="189" height="95.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqm-8k-CLz">
+                                <rect key="frame" x="5" y="5" width="179" height="20"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.turn.up.forward.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="b07-jp-UmQ">
+                                        <rect key="frame" x="5" y="3" width="17" height="13.5"/>
+                                        <color key="tintColor" name="bwColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="b07-jp-UmQ" secondAttribute="height" multiplier="21:20" id="5id-97-Ly7"/>
+                                            <constraint firstAttribute="width" constant="17" id="otX-un-ErF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ti1-MQ-QfP" customClass="CustomLblSFPDRegular" customModule="BillionsApp" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="0.0" width="0.0" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="bwColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ti1-MQ-QfP" secondAttribute="bottom" id="ACL-h2-cUW"/>
+                                    <constraint firstItem="Ti1-MQ-QfP" firstAttribute="top" secondItem="mqm-8k-CLz" secondAttribute="top" id="C8h-Ar-TXR"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ti1-MQ-QfP" secondAttribute="trailing" constant="10" id="KtM-kp-p2s"/>
+                                    <constraint firstItem="b07-jp-UmQ" firstAttribute="leading" secondItem="mqm-8k-CLz" secondAttribute="leading" constant="5" id="Rlu-qH-ueI"/>
+                                    <constraint firstItem="Ti1-MQ-QfP" firstAttribute="leading" secondItem="b07-jp-UmQ" secondAttribute="trailing" constant="10" id="cjK-Hj-pkc"/>
+                                    <constraint firstAttribute="height" constant="20" id="clD-4G-zpB"/>
+                                    <constraint firstItem="b07-jp-UmQ" firstAttribute="centerY" secondItem="mqm-8k-CLz" secondAttribute="centerY" id="iy3-lj-yMS"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shjgdsfhgdserewewrw fdhjs " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPp-RW-VVt" customClass="CustomLabelRegular" customModule="BillionsApp" customModuleProvider="target">
+                                <rect key="frame" x="15" y="30" width="159" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="bwColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAd-zD-lEy" customClass="CustomLblSFPDRegular" customModule="BillionsApp" customModuleProvider="target">
+                                <rect key="frame" x="15" y="76" width="159" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="bwColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="bgColor"/>
+                        <constraints>
+                            <constraint firstItem="PAd-zD-lEy" firstAttribute="top" secondItem="dPp-RW-VVt" secondAttribute="bottom" constant="5" id="4SA-Np-rIB"/>
+                            <constraint firstItem="dPp-RW-VVt" firstAttribute="top" secondItem="mqm-8k-CLz" secondAttribute="bottom" constant="5" id="8Oy-bC-Fnx"/>
+                            <constraint firstAttribute="trailing" secondItem="dPp-RW-VVt" secondAttribute="trailing" constant="15" id="FR6-1y-6oH"/>
+                            <constraint firstItem="mqm-8k-CLz" firstAttribute="top" secondItem="FRn-n0-YTd" secondAttribute="top" constant="5" id="QL0-BM-Fy1"/>
+                            <constraint firstAttribute="bottom" secondItem="PAd-zD-lEy" secondAttribute="bottom" constant="5" id="Vdr-hf-VPg"/>
+                            <constraint firstItem="dPp-RW-VVt" firstAttribute="leading" secondItem="FRn-n0-YTd" secondAttribute="leading" constant="15" id="cad-oW-U2o"/>
+                            <constraint firstAttribute="trailing" secondItem="PAd-zD-lEy" secondAttribute="trailing" constant="15" id="d8Q-dv-eg1"/>
+                            <constraint firstItem="mqm-8k-CLz" firstAttribute="leading" secondItem="FRn-n0-YTd" secondAttribute="leading" constant="5" id="eIr-pX-dCY"/>
+                            <constraint firstItem="PAd-zD-lEy" firstAttribute="leading" secondItem="FRn-n0-YTd" secondAttribute="leading" constant="15" id="ebe-yL-Pbf"/>
+                            <constraint firstAttribute="trailing" secondItem="mqm-8k-CLz" secondAttribute="trailing" constant="5" id="kHd-UO-Nmy"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiI-r6-ap6">
+                        <rect key="frame" x="81" y="0.0" width="30" height="30"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="NiI-r6-ap6" secondAttribute="height" multiplier="1:1" id="4mW-k6-bji"/>
+                            <constraint firstAttribute="height" constant="30" id="zeQ-co-tfk"/>
+                        </constraints>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="heart.circle.fill" catalog="system"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundRect" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorSet">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RT0-Tx-UAQ" customClass="CustomLblSFPDRegular" customModule="BillionsApp" customModuleProvider="target">
+                        <rect key="frame" x="261" y="117.5" width="24" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" name="bwColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserpicIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kqg-tY-oHw">
+                        <rect key="frame" x="290" y="90.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="kqg-tY-oHw" secondAttribute="height" multiplier="1:1" id="e94-MQ-0TD"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundRect" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="kqg-tY-oHw" firstAttribute="bottom" secondItem="FRn-n0-YTd" secondAttribute="bottom" id="5c1-Hq-IZK"/>
+                    <constraint firstAttribute="bottom" secondItem="RT0-Tx-UAQ" secondAttribute="bottom" constant="10" id="DWB-H6-Mwp"/>
+                    <constraint firstItem="NiI-r6-ap6" firstAttribute="top" secondItem="FRn-n0-YTd" secondAttribute="top" constant="-15" id="NAP-1j-liI"/>
+                    <constraint firstItem="RT0-Tx-UAQ" firstAttribute="top" secondItem="FRn-n0-YTd" secondAttribute="bottom" constant="7" id="YUy-vJ-OUG"/>
+                    <constraint firstItem="FRn-n0-YTd" firstAttribute="width" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.6" id="YfH-5m-EkV"/>
+                    <constraint firstItem="NiI-r6-ap6" firstAttribute="leading" secondItem="FRn-n0-YTd" secondAttribute="leading" constant="-15" id="d0A-qR-lRC"/>
+                    <constraint firstItem="FRn-n0-YTd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="gSR-3D-twy"/>
+                    <constraint firstItem="RT0-Tx-UAQ" firstAttribute="trailing" secondItem="FRn-n0-YTd" secondAttribute="trailing" id="gws-I2-eTj"/>
+                    <constraint firstAttribute="trailing" secondItem="kqg-tY-oHw" secondAttribute="trailing" constant="10" id="kXc-qo-tvg"/>
+                    <constraint firstItem="kqg-tY-oHw" firstAttribute="leading" secondItem="FRn-n0-YTd" secondAttribute="trailing" constant="5" id="lW7-HF-j62"/>
+                    <constraint firstItem="kqg-tY-oHw" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.0625" id="sB1-zf-MiB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="ImgUserProfile" destination="kqg-tY-oHw" id="doR-6X-kXx"/>
+                <outlet property="btnLike" destination="NiI-r6-ap6" id="geN-cF-47k"/>
+                <outlet property="constViewForwardH" destination="clD-4G-zpB" id="7U4-MK-bbR"/>
+                <outlet property="imgForward" destination="b07-jp-UmQ" id="0nn-il-vMS"/>
+                <outlet property="lblForward" destination="Ti1-MQ-QfP" id="JsV-PJ-saY"/>
+                <outlet property="lblMsgStatus" destination="RT0-Tx-UAQ" id="flb-eE-Met"/>
+                <outlet property="lblSenderMsg" destination="dPp-RW-VVt" id="pt4-x7-7B8"/>
+                <outlet property="lblTime" destination="PAd-zD-lEy" id="zLu-IL-bb4"/>
+                <outlet property="viewForward" destination="mqm-8k-CLz" id="qlv-mS-ajG"/>
+                <outlet property="viewMsg" destination="FRn-n0-YTd" id="5Nw-Ss-jeB"/>
+            </connections>
+            <point key="canvasLocation" x="-91.875" y="-109.33098591549296"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="UserpicIcon" width="73" height="73"/>
+        <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="104"/>
+        <image name="heart.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="bgColor">
+            <color red="0.58799999952316284" green="0.80000001192092896" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bwColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

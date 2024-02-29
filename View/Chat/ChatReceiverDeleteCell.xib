@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFUIText-Bold.ttf">
+            <string>SFUIText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatReceiverDeleteCell" id="Hii-u3-WU6" customClass="ChatReceiverDeleteCell" customModule="BillionsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hii-u3-WU6" id="FqI-0l-NtW">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserpicIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eFx-vQ-NS5">
+                        <rect key="frame" x="10" y="39.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="eFx-vQ-NS5" secondAttribute="height" multiplier="1:1" id="ZRD-gh-sag"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundRect" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKK-SP-nTU">
+                        <rect key="frame" x="35" y="10" width="242" height="49.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This message was deleted" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQ6-Za-zHh" customClass="CustomLblSFPTRegular" customModule="BillionsApp" customModuleProvider="target">
+                                <rect key="frame" x="25" y="5" width="202" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Bold" family="SF UI Text" pointSize="17"/>
+                                <color key="textColor" name="bwColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Le-9G-dlo" customClass="CustomLblSFPDRegular" customModule="BillionsApp" customModuleProvider="target">
+                                <rect key="frame" x="15" y="30" width="212" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="bwColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vOx-ll-cQB">
+                                <rect key="frame" x="5" y="8" width="15" height="14"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="G04-2h-6WU"/>
+                                    <constraint firstAttribute="width" secondItem="vOx-ll-cQB" secondAttribute="height" multiplier="1:1" id="bsU-bi-IeC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="placeHolder"/>
+                        <constraints>
+                            <constraint firstItem="IQ6-Za-zHh" firstAttribute="top" secondItem="zKK-SP-nTU" secondAttribute="top" constant="5" id="0vJ-9G-87t"/>
+                            <constraint firstAttribute="trailing" secondItem="IQ6-Za-zHh" secondAttribute="trailing" constant="15" id="JcB-6v-CT9"/>
+                            <constraint firstItem="8Le-9G-dlo" firstAttribute="top" secondItem="IQ6-Za-zHh" secondAttribute="bottom" constant="5" id="OSQ-HF-816"/>
+                            <constraint firstItem="8Le-9G-dlo" firstAttribute="leading" secondItem="zKK-SP-nTU" secondAttribute="leading" constant="15" id="Rts-xl-x1t"/>
+                            <constraint firstAttribute="trailing" secondItem="8Le-9G-dlo" secondAttribute="trailing" constant="15" id="UlP-dB-Gvf"/>
+                            <constraint firstAttribute="bottom" secondItem="8Le-9G-dlo" secondAttribute="bottom" constant="5" id="dGe-9P-hJc"/>
+                            <constraint firstItem="IQ6-Za-zHh" firstAttribute="leading" secondItem="vOx-ll-cQB" secondAttribute="trailing" constant="5" id="f8k-aE-OjA"/>
+                            <constraint firstItem="vOx-ll-cQB" firstAttribute="leading" secondItem="zKK-SP-nTU" secondAttribute="leading" constant="5" id="mRi-Vc-rp7"/>
+                            <constraint firstItem="vOx-ll-cQB" firstAttribute="centerY" secondItem="IQ6-Za-zHh" secondAttribute="centerY" id="mUo-Di-JsF"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zKK-SP-nTU" secondAttribute="bottom" constant="10" id="1fp-U2-1ng"/>
+                    <constraint firstItem="zKK-SP-nTU" firstAttribute="top" secondItem="FqI-0l-NtW" secondAttribute="top" constant="10" id="7dS-CP-oLV"/>
+                    <constraint firstItem="zKK-SP-nTU" firstAttribute="leading" secondItem="eFx-vQ-NS5" secondAttribute="trailing" constant="5" id="Spm-CO-g51"/>
+                    <constraint firstItem="eFx-vQ-NS5" firstAttribute="leading" secondItem="FqI-0l-NtW" secondAttribute="leading" constant="10" id="cfV-8T-Mgr"/>
+                    <constraint firstItem="eFx-vQ-NS5" firstAttribute="bottom" secondItem="zKK-SP-nTU" secondAttribute="bottom" id="fbE-vu-Z0P"/>
+                    <constraint firstItem="eFx-vQ-NS5" firstAttribute="width" secondItem="FqI-0l-NtW" secondAttribute="width" multiplier="0.0625" id="nyT-IH-dLc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgDelete" destination="vOx-ll-cQB" id="AnS-MA-U5V"/>
+                <outlet property="imgProfile" destination="eFx-vQ-NS5" id="k9F-K2-gyt"/>
+                <outlet property="lblDeleteMsg" destination="IQ6-Za-zHh" id="NLk-Q4-XBJ"/>
+                <outlet property="lbltime" destination="8Le-9G-dlo" id="THU-HE-Ze6"/>
+                <outlet property="viewDelete" destination="zKK-SP-nTU" id="r1t-sO-pjK"/>
+            </connections>
+            <point key="canvasLocation" x="-137.68115942028987" y="-394.75446428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="UserpicIcon" width="73" height="73"/>
+        <image name="trash.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="bwColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="placeHolder">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.40000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
