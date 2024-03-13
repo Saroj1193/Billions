@@ -115,9 +115,10 @@ extension FriendsListVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = GlobalFunction.fetchViewControllerWithName("ChatDetailsVC", storyBoardName: AppStoryboard.registration.rawValue) as! ChatDetailsVC
-        vc.userData = [self.arrData[indexPath.row]]
-        vc.isForward = self.isForward
-        vc.forwardData = self.forwardData
+        let viewmodel = ChatDetailsFireStoreViewModel(userData: [self.arrData[indexPath.row]])
+        viewmodel.isForward = self.isForward
+        viewmodel.forwardData = self.forwardData
+        vc.viewModel = viewmodel
        
         self.navigationController?.pushViewController(vc, animated: true)
         

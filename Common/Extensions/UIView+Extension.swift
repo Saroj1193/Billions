@@ -280,14 +280,20 @@ extension UIView {
         //        self.layer.addSublayer(gradient)
     }
     
+    func setCorner(corners: CACornerMask, radius: CGFloat) {
+        self.clipsToBounds = true
+        self.layer.cornerRadius = radius
+        self.layer.maskedCorners = corners
+    }
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         layer.mask = mask
-        self.layoutIfNeeded()
-        self.setNeedsLayout()
-        self.setNeedsDisplay()
+        layer.backgroundColor = UIColor.red.cgColor
+//        self.layoutIfNeeded()
+//        self.setNeedsLayout()
+//        self.setNeedsDisplay()
     }
     
     
@@ -340,17 +346,32 @@ extension UIView {
         }
     }
     
+    func addShadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: Float) {
+        layer.masksToBounds = false
+        layer.shadowOffset = offset
+        layer.shadowColor = color.cgColor
+        layer.shadowRadius = radius
+        layer.shadowOpacity = opacity
+//        
+//
+//        let backgroundCGColor = backgroundColor?.cgColor
+//        backgroundColor = nil
+//        layer.backgroundColor =  backgroundCGColor
+        layer.cornerRadius = 5
+    }
+    
     func setCornerShadow(shadowRadius: CGFloat = 2,
                          shadowOpacity: Float = 1,
                          shadowColor: CGColor = UIColor.blackColor.withAlphaComponent(0.15).cgColor,
-                         shadowOffset: CGSize = CGSize(width: 0.0, height: 2.0)) {
+                         shadowOffset: CGSize = CGSize(width: 0.0, height: 2.0), cornerRadius: CGFloat = 12) {
         DispatchQueue.main.async {
-            self.layer.cornerRadius = 12
+            self.layer.cornerRadius = cornerRadius
             self.layer.masksToBounds = false
             self.layer.shadowColor = shadowColor
             self.layer.shadowOffset = shadowOffset
             self.layer.shadowRadius = shadowRadius
             self.layer.shadowOpacity = shadowOpacity
+            self.clipsToBounds = true
         }
     
         

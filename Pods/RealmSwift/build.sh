@@ -134,7 +134,7 @@ xcode() {
 xc() {
     # Logs xcodebuild output in realtime
     : "${NSUnbufferedIO:=YES}"
-    xcode "$@" "${REALM_EXTRA_BUILD_ARGUMENTS[@]}"
+    xcode "$@" ${REALM_EXTRA_BUILD_ARGUMENTS[@]}
 }
 
 xctest() {
@@ -286,7 +286,6 @@ create_xcframework() {
     local platform="$3"
 
     local out_path="$ROOT_WORKSPACE/$config/$platform/$product.xcframework"
-    # find "$ROOT_WORKSPACE" -maxdepth 5
     find "$ROOT_WORKSPACE" -path "*/$config*/$product.framework" \
         | sed 's/.*/-framework &/' \
         | xargs xcodebuild -create-xcframework -allow-internal-distribution -output "$out_path"
@@ -1083,7 +1082,7 @@ case "$COMMAND" in
 
     release-create-xcframework-*)
         platform="$2"
-        xcode_version=$(echo "$COMMAND" | cut -d- -f4 )
+        xcode_version=$(echo "$COMMAND" | cut -d- -f4)
 
         # Artifacts are nested zips so need to be extracted twice
         find . -name 'build-*.zip' -exec unzip {} \;
@@ -1295,11 +1294,11 @@ case "$COMMAND" in
           exit 0
         fi
 
-        s3cmd put --recursive --acl-public --access_key=${AWS_ACCESS_KEY_ID} --secret_key=${AWS_SECRET_ACCESS_KEY} docs/swift_output/ s3://realm-sdks/docs/realm-sdks/swift/${VERSION}/
-        s3cmd put --recursive --acl-public --access_key=${AWS_ACCESS_KEY_ID} --secret_key=${AWS_SECRET_ACCESS_KEY} docs/swift_output/ s3://realm-sdks/docs/realm-sdks/swift/latest/
+        s3cmd put --no-mime-magic --guess-mime-type --recursive --acl-public docs/swift_output/ s3://realm-sdks/docs/realm-sdks/swift/${VERSION}/
+        s3cmd put --no-mime-magic --guess-mime-type --recursive --acl-public docs/swift_output/ s3://realm-sdks/docs/realm-sdks/swift/latest/
 
-        s3cmd put --recursive --acl-public --access_key=${AWS_ACCESS_KEY_ID} --secret_key=${AWS_SECRET_ACCESS_KEY} docs/objc_output/ s3://realm-sdks/docs/realm-sdks/objc/${VERSION}/
-        s3cmd put --recursive --acl-public --access_key=${AWS_ACCESS_KEY_ID} --secret_key=${AWS_SECRET_ACCESS_KEY} docs/objc_output/ s3://realm-sdks/docs/realm-sdks/objc/latest/
+        s3cmd put --no-mime-magic --guess-mime-type --recursive --acl-public docs/objc_output/ s3://realm-sdks/docs/realm-sdks/objc/${VERSION}/
+        s3cmd put --no-mime-magic --guess-mime-type --recursive --acl-public docs/objc_output/ s3://realm-sdks/docs/realm-sdks/objc/latest/
         ;;
 
     "publish-update-checker")
@@ -1311,7 +1310,7 @@ case "$COMMAND" in
 
         # update static.realm.io/update/cocoa
         printf "%s" "${VERSION}" > cocoa
-        s3cmd put --recursive --acl-public --access_key=${AWS_ACCESS_KEY_ID} --secret_key=${AWS_SECRET_ACCESS_KEY} cocoa s3://static.realm.io/update/
+        s3cmd put --acl-public cocoa s3://static.realm.io/update/
         exit 0
         ;;
 
@@ -1344,9 +1343,9 @@ x.y.z Release notes (yyyy-MM-dd)
 ### Compatibility
 * Realm Studio: 14.0.1 or later.
 * APIs are backwards compatible with all previous releases in the 10.x.y series.
-* Carthage release for Swift is built with Xcode 15.2.0.
+* Carthage release for Swift is built with Xcode 15.3.0.
 * CocoaPods: 1.10 or later.
-* Xcode: 14.2-15.2.0.
+* Xcode: 14.2-15.3.0.
 
 ### Internal
 * Upgraded realm-core from ? to ?

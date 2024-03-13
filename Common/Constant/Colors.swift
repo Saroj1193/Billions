@@ -13,6 +13,9 @@ extension UIColor {
     public static let bwColor = UIColor(named: "bwColor")
     public static let navColor = UIColor(named: "navColor")
     public static let bgColor = UIColor(named: "bgColor")
+    public static let placeHolder = UIColor(named: "placeHolder")
+    public static let wbColor = UIColor(named: "wbColor")
+    public static let inputFieldBorder = UIColor(hex: "DEDDDD")
     // Popup Over color
     public static let document1Color = UIColor(named: "document1")
     public static let document2Color = UIColor(named: "document2")
@@ -28,6 +31,8 @@ extension UIColor {
     public static let contact2Color = UIColor(named: "contact2")
     public static let poll1Color = UIColor(named: "poll1")
     public static let poll2Color = UIColor(named: "poll2")
+    public static let reply1Color = UIColor(named: "reply1")
+    public static let reply2Color = UIColor(named: "reply2")
     
     public static let gray1Color = UIColor(hex: "424242")
     public static let gray2Color = UIColor(hex: "6D6D6D")

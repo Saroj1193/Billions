@@ -139,9 +139,10 @@ class UserProfileVC: BaseViewController {
                     FireStoreChat.shared.getUserDetails(docId: currentUID) { data in
                         if data.count > 0 {
                             APPData.appDelegate.loginUserData = [UserData.init(dictionary: data[0])]
+                            self.pushChatList()
                         }
                     }
-                    self.pushChatList()
+                    
                     if Messaging.messaging().fcmToken != nil {
                         setUserNotificationToken(token: Messaging.messaging().fcmToken!)
                     }
@@ -152,9 +153,9 @@ class UserProfileVC: BaseViewController {
                     FireStoreChat.shared.getUserDetails(docId: currentUID) { data in
                         if data.count > 0 {
                             APPData.appDelegate.loginUserData = [UserData.init(dictionary: data[0])]
+                            self.pushChatList()
                         }
                     }
-                    self.pushChatList()
                     if Messaging.messaging().fcmToken != nil {
                         setUserNotificationToken(token: Messaging.messaging().fcmToken!)
                     }

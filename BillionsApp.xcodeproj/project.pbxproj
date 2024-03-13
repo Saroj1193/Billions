@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520B1BB62B90B86D002DE2D3 /* ChatDetailsFireStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B1BB52B90B86D002DE2D3 /* ChatDetailsFireStoreViewModel.swift */; };
 		5264B9372B8F6FDE0094A8BB /* PopupOverGridMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264B9352B8F6FDE0094A8BB /* PopupOverGridMenuCell.swift */; };
 		5264B9382B8F6FDE0094A8BB /* PopupOverGridMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5264B9362B8F6FDE0094A8BB /* PopupOverGridMenuCell.xib */; };
 		5280EBF22A61282100DCE123 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5280EBF12A61282100DCE123 /* Colors.swift */; };
 		5280EBF42A612B4400DCE123 /* ConstantString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5280EBF32A612B4400DCE123 /* ConstantString.swift */; };
+		52BD446D2B998DCB0008D03F /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD446C2B998DCB0008D03F /* BaseTableViewCell.swift */; };
 		52D0AACC2B84A5260094D84E /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0AACB2B84A5260094D84E /* SplashVC.swift */; };
+		52E54E0F2B9589FA00E9014C /* ChatListFireStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E54E0E2B9589FA00E9014C /* ChatListFireStoreViewModel.swift */; };
 		52E985952B8898F100C50474 /* UICalande+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E985942B8898F100C50474 /* UICalande+Extension.swift */; };
 		52FE46EC2B85BCA700C6A7A0 /* UserDataStr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE46EB2B85BCA700C6A7A0 /* UserDataStr.swift */; };
 		52FE46EE2B85D30D00C6A7A0 /* SendMsgData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE46ED2B85D30D00C6A7A0 /* SendMsgData.swift */; };
@@ -138,6 +141,7 @@
 /* Begin PBXFileReference section */
 		05BEED002FA63843785DD54C /* Pods-BillionsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillionsApp.debug.xcconfig"; path = "Target Support Files/Pods-BillionsApp/Pods-BillionsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		20E0C1363C19086A550D239C /* Pods-BillionsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillionsApp.release.xcconfig"; path = "Target Support Files/Pods-BillionsApp/Pods-BillionsApp.release.xcconfig"; sourceTree = "<group>"; };
+		520B1BB52B90B86D002DE2D3 /* ChatDetailsFireStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailsFireStoreViewModel.swift; sourceTree = "<group>"; };
 		5264B9352B8F6FDE0094A8BB /* PopupOverGridMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupOverGridMenuCell.swift; sourceTree = "<group>"; };
 		5264B9362B8F6FDE0094A8BB /* PopupOverGridMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupOverGridMenuCell.xib; sourceTree = "<group>"; };
 		5280EBF12A61282100DCE123 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -145,7 +149,9 @@
 		52AA6BA32A86720D00E50219 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		52AA6BA52A86720D00E50219 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		52BC08FE2B20962300DE166A /* BillionsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BillionsApp.entitlements; sourceTree = "<group>"; };
+		52BD446C2B998DCB0008D03F /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		52D0AACB2B84A5260094D84E /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		52E54E0E2B9589FA00E9014C /* ChatListFireStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListFireStoreViewModel.swift; sourceTree = "<group>"; };
 		52E985942B8898F100C50474 /* UICalande+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICalande+Extension.swift"; sourceTree = "<group>"; };
 		52FE46EB2B85BCA700C6A7A0 /* UserDataStr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStr.swift; sourceTree = "<group>"; };
 		52FE46ED2B85D30D00C6A7A0 /* SendMsgData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMsgData.swift; sourceTree = "<group>"; };
@@ -281,6 +287,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		52E54E112B9596A200E9014C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52E54E0E2B9589FA00E9014C /* ChatListFireStoreViewModel.swift */,
+				520B1BB52B90B86D002DE2D3 /* ChatDetailsFireStoreViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		52FEDF7F2B8F574D001EC044 /* PopupOver */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +337,7 @@
 				CD508713272042360071220B /* Common */,
 				CD50870E2720416C0071220B /* Storyboard */,
 				CD5087102720416C0071220B /* View */,
+				52E54E112B9596A200E9014C /* ViewModel */,
 				CD50870F2720416C0071220B /* Viewcontrollers */,
 				CD5086F627202AD70071220B /* Products */,
 				A0C33BE21698F7AA0A3F6BB6 /* Pods */,
@@ -344,8 +360,8 @@
 				CD50870C272037660071220B /* GoogleService-Info.plist */,
 				CD5086F827202AD70071220B /* AppDelegate.swift */,
 				52D0AACB2B84A5260094D84E /* SplashVC.swift */,
-				CD5086FE27202AD70071220B /* Main.storyboard */,
 				CD50870127202ADB0071220B /* Assets.xcassets */,
+				CD5086FE27202AD70071220B /* Main.storyboard */,
 				CD50870327202ADB0071220B /* LaunchScreen.storyboard */,
 				CD50870627202ADB0071220B /* Info.plist */,
 			);
@@ -457,6 +473,7 @@
 				CD50873C272042370071220B /* CustomeTextView.swift */,
 				CD50873D272042370071220B /* CustomeTextField.swift */,
 				CD50873E272042370071220B /* Enum.swift */,
+				52BD446C2B998DCB0008D03F /* BaseTableViewCell.swift */,
 			);
 			path = "CustomeUI Class";
 			sourceTree = "<group>";
@@ -747,6 +764,7 @@
 				CD50877D272042370071220B /* ImagePickerManager.swift in Sources */,
 				CD4BA35827394769006EB572 /* PhotoSenderCell.swift in Sources */,
 				CD508781272042370071220B /* WebView.swift in Sources */,
+				52E54E0F2B9589FA00E9014C /* ChatListFireStoreViewModel.swift in Sources */,
 				CD508779272042370071220B /* Constant.swift in Sources */,
 				CD50877F272042370071220B /* PushNotification.swift in Sources */,
 				CD50876C272042370071220B /* BottomSheetPresenter.swift in Sources */,
@@ -795,6 +813,7 @@
 				CD508752272042370071220B /* LocationSynching.swift in Sources */,
 				CD9E86FE2729420F008CFDB2 /* VerifyOTPVC.swift in Sources */,
 				CD508766272042370071220B /* NSDictionary+Extension.swift in Sources */,
+				520B1BB62B90B86D002DE2D3 /* ChatDetailsFireStoreViewModel.swift in Sources */,
 				52FEDF872B8F58C1001EC044 /* PopupOverGridMenuController.swift in Sources */,
 				CD4BA35B27395E01006EB572 /* RoundProgressView.swift in Sources */,
 				CD508787272042370071220B /* APIActionName.swift in Sources */,
@@ -810,6 +829,7 @@
 				CD508762272042370071220B /* UILabel+Extension.swift in Sources */,
 				CDBF677B272A9D7E00C6F52C /* UserData.swift in Sources */,
 				CD50875D272042370071220B /* UIFont+Extension.swift in Sources */,
+				52BD446D2B998DCB0008D03F /* BaseTableViewCell.swift in Sources */,
 				CD508773272042370071220B /* ConstantText.swift in Sources */,
 				CD50875A272042370071220B /* BaseViewController.swift in Sources */,
 				CD50876E272042370071220B /* UITableView+Extension.swift in Sources */,
@@ -969,19 +989,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BillionsApp/BillionsApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = ZZFR437D2R;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 327TPG23FM;
 				INFOPLIST_FILE = BillionsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.closwap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CICD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Closwap_Dev_6122023;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -995,19 +1013,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BillionsApp/BillionsApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = ZZFR437D2R;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 327TPG23FM;
 				INFOPLIST_FILE = BillionsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.closwap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CICD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Closwap_Dev_6122023;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

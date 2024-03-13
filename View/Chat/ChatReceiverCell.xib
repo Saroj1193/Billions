@@ -23,7 +23,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserpicIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Vsm-2v-ahX">
-                        <rect key="frame" x="10" y="89.5" width="20" height="20"/>
+                        <rect key="frame" x="10" y="69.5" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Vsm-2v-ahX" secondAttribute="height" multiplier="1:1" id="GZc-IN-BaD"/>
                         </constraints>
@@ -32,10 +32,10 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdM-vU-sfN">
-                        <rect key="frame" x="35" y="15" width="185" height="94.5"/>
+                        <rect key="frame" x="35" y="15" width="128" height="74.5"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X4-Nv-rdf">
-                                <rect key="frame" x="5" y="5" width="175" height="20"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X4-Nv-rdf" customClass="ForwardView" customModule="BillionsApp" customModuleProvider="target">
+                                <rect key="frame" x="5" y="5" width="118" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forwarded" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsV-a1-20H" customClass="CustomLblSFPTRegular" customModule="BillionsApp" customModuleProvider="target">
                                         <rect key="frame" x="32" y="0.0" width="58" height="20"/>
@@ -64,15 +64,15 @@
                                     <constraint firstAttribute="bottom" secondItem="hsV-a1-20H" secondAttribute="bottom" id="gpa-qL-6gh"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ghsd fjksdghf 4234  jghdasuifg hfghfghf" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qd-fQ-10Y" customClass="CustomLblSFPTRegular" customModule="BillionsApp" customModuleProvider="target">
-                                <rect key="frame" x="15" y="30" width="155" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ghsd fjksdgh" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qd-fQ-10Y" customClass="CustomLblSFPTRegular" customModule="BillionsApp" customModuleProvider="target">
+                                <rect key="frame" x="15" y="30" width="98" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="SFUIText-Bold" family="SF UI Text" pointSize="17"/>
                                 <color key="textColor" name="bwColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0Y-HB-4VD" customClass="CustomLblSFPDRegular" customModule="BillionsApp" customModuleProvider="target">
-                                <rect key="frame" x="15" y="75" width="155" height="14.5"/>
+                                <rect key="frame" x="15" y="55" width="98" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" name="bwColor"/>
                                 <nil key="highlightedColor"/>
@@ -98,7 +98,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfw-25-44I">
-                        <rect key="frame" x="205" y="0.0" width="30" height="30"/>
+                        <rect key="frame" x="148" y="0.0" width="30" height="30"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="Nxd-uR-3vB"/>

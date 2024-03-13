@@ -14,7 +14,7 @@ enum LongPopMsg: String {
     case frwd = "Forward",  report = "Report", deleteme = "Delete for me",deleteAll = "Delete for everyone", reply = "Reply", like = "Like" , delete = "Delete"
 }
 
-class PhotoReceiverCell: UITableViewCell {
+class PhotoReceiverCell: BaseTableViewCell {
     weak var chatDetails: ChatDetailsVC? {
         didSet {
             
@@ -51,6 +51,9 @@ class PhotoReceiverCell: UITableViewCell {
         
         self.msgImage.isUserInteractionEnabled = true
         self.msgImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleZoomTap(_:))))
+        self.view1 = self.viewMsg
+        self.img = self.imgUserProfile
+        self.setSwipeGesture()
     }
 
     func configureCellContextMenuView() -> FTConfiguration {
@@ -84,7 +87,7 @@ class PhotoReceiverCell: UITableViewCell {
     
     @IBAction func btnDownloadAction(_ sender: Any) {
         guard let indexPath = chatDetails?.tblChat.indexPath(for: self) else { return }
-        guard let message = chatDetails?.msgData else { return }
+        guard let message = chatDetails?.msgSectionData else { return }
         
 //        loadFullSize(message: message, messageImageUrlString: message[indexPath.row]["imageUrl"] as? String ?? "", indexPath: indexPath)
     }

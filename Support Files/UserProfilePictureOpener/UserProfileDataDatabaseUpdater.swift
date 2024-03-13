@@ -42,10 +42,12 @@ final class UserProfileDataDatabaseUpdater: NSObject {
                     photoUpdatingGroup.leave()
                 }
             }
-            if imageElement.key == "photoURL" {
-                APPData.appDelegate.loginUserData[0].photoURL = url
-            } else {
-                APPData.appDelegate.loginUserData[0].thumbnailPhotoURL = url
+            if APPData.appDelegate.loginUserData.count > 0 {
+                if imageElement.key == "photoURL" {
+                    APPData.appDelegate.loginUserData[0].photoURL = url
+                } else {
+                    APPData.appDelegate.loginUserData[0].thumbnailPhotoURL = url
+                }
             }
         }
         

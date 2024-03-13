@@ -64,7 +64,7 @@ open class CustomeTextView : UITextView {
     override open func layoutSubviews() {
         super.layoutSubviews()
         
-        self.contentInset = UIEdgeInsets(top: 5, left: 5, bottom: 0, right: 0)
+        self.contentInset = UIEdgeInsets(top: 7, left: 0, bottom: 0, right: 0)
     }
     
     override open var contentInset: UIEdgeInsets {
@@ -124,7 +124,7 @@ open class CustomeTextView : UITextView {
     
     func placeholderRectForBounds(bounds: CGRect) -> CGRect {
    
-        var x : CGFloat = 5
+        var x : CGFloat = 3
         var y = contentInset.top
         let w = frame.size.width - contentInset.left - contentInset.right - 16.0
         let h = frame.size.height - contentInset.top - contentInset.bottom 
@@ -153,6 +153,4 @@ open class CustomeTextView : UITextView {
    
     @IBInspectable var setMaxValue: Bool = false
     @IBInspectable var MaxValue: NSInteger = 5
-    
-    
 }

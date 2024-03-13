@@ -454,7 +454,7 @@ extension String {
     }
     
     func trimSpaces() -> String {
-        return trimmingCharacters(in: CharacterSet(charactersIn: "\t\n "))
+        return trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     func stringByTrimmingLeadingCharacters(in characterSet: CharacterSet) -> String {

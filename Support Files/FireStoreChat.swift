@@ -143,7 +143,6 @@ class FireStoreChat: NSObject {
         var chatHistoryArray = [[String:Any]]()
         Firestore.firestore().collection(dataCollection).document(docId).collection(messageCollection).whereField(strNotDeleteMsgUsers, arrayContainsAny: [APPData.appDelegate.loginUserData[0].userId ?? ""]).order(by: strtimeStamp, descending: true).getDocuments {(doc, error) in
             if error == nil {
-                print(doc!.documents)
                 if doc?.count ?? 0 > 0 {
                     for document in doc!.documents {
                         chatHistoryArray.append(document.data())
@@ -158,19 +157,19 @@ class FireStoreChat: NSObject {
         }
     }
     
-    func setRecentMsg(_ concatMemberId: String, _ dic: ChatListData) {
-        var dicParam: ChatListData = dic
+    func setRecentMsg(_ concatMemberId: String, _ dic: [String:Any]) {
+        var dicParam = dic
         Firestore.firestore().collection(dataCollection).document(concatMemberId).getDocument { query, error in
             if error == nil {
                 if let d = query?.data() {
                     let uC = d[strunreadCount] as? Int ?? 0
-                    dicParam.unreadCount = (uC + 1)
+                    dicParam[strunreadCount] = (uC + 1)
                 }
                 
                 if query?.exists == true {
-                    Firestore.firestore().collection(dataCollection).document(concatMemberId).updateData(dicParam.dic)
+                    Firestore.firestore().collection(dataCollection).document(concatMemberId).updateData(dicParam)
                 } else {
-                    Firestore.firestore().collection(dataCollection).document(concatMemberId).setData(dicParam.dic)
+                    Firestore.firestore().collection(dataCollection).document(concatMemberId).setData(dicParam)
                 }
             }
         }
@@ -231,6 +230,16 @@ class FireStoreChat: NSObject {
                 }
             }
         }
+    }
+    
+    func getUnreadMsgCount(docId: String, _ data : @escaping (Int) -> Swift.Void) {
+        Firestore.firestore().collection(dataCollection).document(docId).collection(messageCollection).whereField(strmsgStatus, isNotEqualTo: MsgStatus.read.rawValue).getDocuments(completion: { snap, error in
+            if error != nil {
+                data(0)
+            } else {
+                data(snap?.documents.count ?? 0)
+            }
+        })
     }
 }
 

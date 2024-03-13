@@ -13,7 +13,7 @@ import Firebase
 
 let blurredPlaceholder = blurEffect(image: UIImage(named: "blurPlaceholder")!)
 
-class ChatReceiverCell: UITableViewCell {
+class ChatReceiverCell: BaseTableViewCell {
     @IBOutlet var imgUserProfile: UIImageView!
     @IBOutlet var viewMsg: UIView!
     @IBOutlet var viewForward: UIView!
@@ -34,8 +34,11 @@ class ChatReceiverCell: UITableViewCell {
         }
         
         self.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(setMessageMenu)))
+        self.view1 = self.viewMsg
+        self.img = self.imgUserProfile
+        self.setSwipeGesture()
     }
-
+    
     func configureCellContextMenuView() -> FTConfiguration {
         let config = FTConfiguration()
         config.backgoundTintColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.0)
@@ -62,7 +65,6 @@ class ChatReceiverCell: UITableViewCell {
     }
     
     func setReceiverCell(_ data: MessageListModel, _ userImg: String?){
-        print("Like:--",data.likeUsers , APPData.appDelegate.loginUserData[0].userId ?? "" )
         self.btnLike.isHidden = !(data.likeUsers ?? [String]()).contains(APPData.appDelegate.loginUserData[0].userId ?? "")
         self.viewForward.isHidden = !(data.isForwarded ?? false)
         self.lblForward.text = self.viewForward.isHidden ? "" : "Forwarded"

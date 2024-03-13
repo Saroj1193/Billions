@@ -37,8 +37,22 @@ struct ChatListData {
     var imageUrl: String = ""
     var thumbnailImageUrl: String = ""
     var localImage: Data = Data()
+    // Video message
+    var videoUrl: String = ""
+    var localVideoUrl: String = ""
+    // Replay message
+    var isReplay: Bool = false
+    var replyData: [String: Any] = [:]
     
     var dic: [String: Any] {
-        return [strRName: RName, strRTImage: RTImage, strRID: RID, strOnlineStatusR: onlineStatusR, strSName: SName, strSTImage: STImage, strSID: SID, strOnlineStatusS: onlineStatusS, strmsgType: msgType, strmessage: message, strtimeStamp: timeStamp, strid: id, strisGroupChat: isGroupChat, strisForwarded: isForwarded, strusersIDs: usersIDs, strchatID: chatID, strmsgID: msgID, strmsgStatus: msgStatus, strNotDeleteMsgUsers: NotDeleteMsgUsers, strunreadCount: unreadCount, strisDeleteAll: isDeleteAll, strimageWidth: imageWidth, strimageHeight: imageHeight, strthumbnailImageUrl: thumbnailImageUrl, strimageUrl: imageUrl, strlocalImage: localImage]
+        return [strRName: RName, strRTImage: RTImage, strRID: RID, strOnlineStatusR: onlineStatusR, strSName: SName, strSTImage: STImage, strSID: SID, strOnlineStatusS: onlineStatusS, strmsgType: msgType, strmessage: message, strtimeStamp: timeStamp, strid: id, strisGroupChat: isGroupChat, strisForwarded: isForwarded, strusersIDs: usersIDs, strchatID: chatID, strmsgID: msgID, strmsgStatus: msgStatus, strNotDeleteMsgUsers: NotDeleteMsgUsers, strunreadCount: unreadCount, strisDeleteAll: isDeleteAll, strisReplay: isReplay, strreplyData: replyData]
+    }
+    
+    var dicPhoto: [String: Any] {
+        return [strRName: RName, strRTImage: RTImage, strRID: RID, strOnlineStatusR: onlineStatusR, strSName: SName, strSTImage: STImage, strSID: SID, strOnlineStatusS: onlineStatusS, strmsgType: msgType, strmessage: message, strtimeStamp: timeStamp, strid: id, strisGroupChat: isGroupChat, strisForwarded: isForwarded, strusersIDs: usersIDs, strchatID: chatID, strmsgID: msgID, strmsgStatus: msgStatus, strNotDeleteMsgUsers: NotDeleteMsgUsers, strunreadCount: unreadCount, strisDeleteAll: isDeleteAll, strimageWidth: imageWidth, strimageHeight: imageHeight, strthumbnailImageUrl: thumbnailImageUrl, strimageUrl: imageUrl, strlocalImage: localImage, strisReplay: isReplay, strreplyData: replyData]
+    }
+    
+    var dicVideo: [String: Any] {
+        return [strRName: RName, strRTImage: RTImage, strRID: RID, strOnlineStatusR: onlineStatusR, strSName: SName, strSTImage: STImage, strSID: SID, strOnlineStatusS: onlineStatusS, strmsgType: msgType, strmessage: message, strtimeStamp: timeStamp, strid: id, strisGroupChat: isGroupChat, strisForwarded: isForwarded, strusersIDs: usersIDs, strchatID: chatID, strmsgID: msgID, strmsgStatus: msgStatus, strNotDeleteMsgUsers: NotDeleteMsgUsers, strunreadCount: unreadCount, strisDeleteAll: isDeleteAll, strimageWidth: imageWidth, strimageHeight: imageHeight, strthumbnailImageUrl: thumbnailImageUrl, strimageUrl: imageUrl, strlocalImage: localImage, strvideoUrl: videoUrl, strlocalVideoUrl: localVideoUrl, strisReplay: isReplay, strreplyData: replyData]
     }
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 struct SendMsgData {
     var RID : String
     var SID : String
@@ -31,9 +30,24 @@ struct SendMsgData {
     var imageUrl: String = ""
     var thumbnailImageUrl: String = ""
     var localImage: Data = Data()
+    // Video message
+    var videoUrl: String = ""
+    var localVideoUrl: String = ""
+    
+    // Replay message
+    var isReplay: Bool = false
+    var replyData: [String: Any] = [:]
     
     var dic: [String: Any] {
-        return [strRID: RID, strSID: SID, strmsgType: msgType, strmessage: message, strtimeStamp: timeStamp, strid: id, strisGroupChat: isGroupChat, strisForwarded: isForwarded, strusersIDs: usersIDs, strchatID: chatID, strmsgID: msgID, strmsgStatus: msgStatus, strNotDeleteMsgUsers: NotDeleteMsgUsers, strunreadCount: unreadCount, strisDeleteAll: isDeleteAll, strlikeUsers: likeUsers, strlikeSymbole: likeSymbole, strimageWidth: imageWidth, strimageHeight: imageHeight, strthumbnailImageUrl: thumbnailImageUrl, strimageUrl: imageUrl, strlocalImage: localImage]
+        return [strRID: RID, strSID: SID, strmsgType: msgType, strmessage: message, strtimeStamp: timeStamp, strid: id, strisGroupChat: isGroupChat, strisForwarded: isForwarded, strusersIDs: usersIDs, strchatID: chatID, strmsgID: msgID, strmsgStatus: msgStatus, strNotDeleteMsgUsers: NotDeleteMsgUsers, strunreadCount: unreadCount, strisDeleteAll: isDeleteAll, strlikeUsers: likeUsers, strlikeSymbole: likeSymbole, strisReplay: isReplay, strreplyData: replyData]
+    }
+    
+    var dicPhoto: [String: Any] {
+        return [strRID: RID, strSID: SID, strmsgType: msgType, strmessage: message, strtimeStamp: timeStamp, strid: id, strisGroupChat: isGroupChat, strisForwarded: isForwarded, strusersIDs: usersIDs, strchatID: chatID, strmsgID: msgID, strmsgStatus: msgStatus, strNotDeleteMsgUsers: NotDeleteMsgUsers, strunreadCount: unreadCount, strisDeleteAll: isDeleteAll, strlikeUsers: likeUsers, strlikeSymbole: likeSymbole, strimageWidth: imageWidth, strimageHeight: imageHeight, strthumbnailImageUrl: thumbnailImageUrl, strimageUrl: imageUrl, strlocalImage: localImage, strisReplay: isReplay, strreplyData: replyData]
+    }
+    
+    var dicVideo: [String: Any] {
+        return [strRID: RID, strSID: SID, strmsgType: msgType, strmessage: message, strtimeStamp: timeStamp, strid: id, strisGroupChat: isGroupChat, strisForwarded: isForwarded, strusersIDs: usersIDs, strchatID: chatID, strmsgID: msgID, strmsgStatus: msgStatus, strNotDeleteMsgUsers: NotDeleteMsgUsers, strunreadCount: unreadCount, strisDeleteAll: isDeleteAll, strlikeUsers: likeUsers, strlikeSymbole: likeSymbole, strimageWidth: imageWidth, strimageHeight: imageHeight, strthumbnailImageUrl: thumbnailImageUrl, strimageUrl: imageUrl, strlocalImage: localImage, strvideoUrl: videoUrl, strlocalVideoUrl: localVideoUrl, strisReplay: isReplay, strreplyData: replyData]
     }
 }
 
@@ -45,3 +59,8 @@ let strimageHeight = "imageHeight"
 let strimageUrl = "imageUrl"
 let strthumbnailImageUrl = "thumbnailImageUrl"
 let strlocalImage = "localImage"
+let strUpdateAt = "updateAt"
+let strlocalVideoUrl = "localVideoUrl"
+let strvideoUrl = "videoUrl"
+let strisReplay = "isReplay"
+let strreplyData = "replyData"

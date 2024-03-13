@@ -10,7 +10,7 @@ import FTPopOverMenu_Swift
 import SDWebImage
 import Firebase
 
-class PhotoSenderCell: UITableViewCell {
+class PhotoSenderCell: BaseTableViewCell {
     weak var chatDetails: ChatDetailsVC? {
         didSet {
             
@@ -47,6 +47,9 @@ class PhotoSenderCell: UITableViewCell {
         self.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(setMessageMenu)))
         self.msgImage.isUserInteractionEnabled = true
         self.msgImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleZoomTap(_:))))
+        self.view1 = self.viewMsg
+        self.img = self.ImgUserProfile
+        self.setSwipeGesture()
     }
     
     func configureCellContextMenuView() -> FTConfiguration {
@@ -81,7 +84,7 @@ class PhotoSenderCell: UITableViewCell {
     
     @IBAction func btnDownloadAction(_ sender: Any) {
         guard let indexPath = chatDetails?.tblChat.indexPath(for: self) else { return }
-        guard let message = chatDetails?.msgData else { return }
+        guard let message = chatDetails?.msgSectionData else { return }
         
 //        loadFullSize(message: message, messageImageUrlString: message[indexPath.row]["imageUrl"] as? String ?? "", indexPath: indexPath)
     }
@@ -238,6 +241,7 @@ class PhotoSenderCell: UITableViewCell {
         
         self.lblSenderMsg.text = data.message ?? ""
         self.lblTime.text = timestampOfChatLogMessage(getTimestampToDate( (data.timeStamp is NSNull) ? 0 : Int((data.timeStamp as! Timestamp).seconds)))
+        self.lblMsgStatus.text = data.msgStatus?.capitalized ?? ""
     }
 }
 
