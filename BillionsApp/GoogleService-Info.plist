@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>212252407262-i61l3pquebbdf542bcgilfqtsq3os171.apps.googleusercontent.com</string>
+	<string>{Please use your CLIENT_ID}</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.212252407262-i61l3pquebbdf542bcgilfqtsq3os171</string>
+	<string>{Please use your REVERSED_CLIENT_ID}</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAUTuvtp3gpxkc0sorNfNBrDaT-QErCBtI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>212252407262</string>
+	<string>{Please use your GCM_SENDER_ID}</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.chatDemo</string>
 	<key>PROJECT_ID</key>
-	<string>mychtapp-75f70</string>
+	<string>{Please use your PROJECT_ID}</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mychtapp-75f70.appspot.com</string>
+	<string>{Please use your STORAGE_BUCKET}</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:212252407262:ios:6441b6db7eedaf7340594f</string>
+	<string>{Please use your GOOGLE_APP_ID}</string>
 	<key>DATABASE_URL</key>
-	<string>https://mychtapp-75f70.firebaseio.com</string>
+	<string>{Please use your DATABASE_URL}</string>
 </dict>
 </plist>
